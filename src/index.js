@@ -1,8 +1,6 @@
-require("./test.css");
+require('./test.css')
 
-console.log((
-    (...words) => words.join(" "))(
-        "Bonjour",
-        "Monde"
-    )
-);
+console.log(((...words) => words.join(' '))(
+  'Bonjour',
+  'Monde'
+))
