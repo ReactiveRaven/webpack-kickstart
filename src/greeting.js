@@ -1,2 +1,2 @@
 module.exports = (...words) =>
-  (words.length ? words : [ 'Bonjour', 'Monde', 'Salut!' ]).join(' ')
+  (words.length ? words : [ 'Hello', 'world' ]).join(' ')
