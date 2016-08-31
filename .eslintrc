@@ -4,6 +4,7 @@
     "standard",
     "promise"
   ],
+  "parser": "babel-eslint",
   "rules": {
     "valid-jsdoc": [
       2,
