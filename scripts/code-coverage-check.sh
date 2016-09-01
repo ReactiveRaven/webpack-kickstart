@@ -19,7 +19,19 @@
 # If you're _sure_ you don't want 100% code coverage, go ahead and edit the stuff below.
 # But don't say I didn't warn you!
 
-PROJDIR="${BASH_SOURCE%/*}/../..";
+# 0. Find the project root
+PROJDIR="${BASH_SOURCE%/*}";
+while [ `ls ${PROJDIR} | grep package.json | wc -l` -lt 1 -a ${#PROJDIR} -lt 1000 ]; do
+    PROJDIR="${PROJDIR}/..";
+done;
+if [ ${#PROJDIR} -gt 1000 ]; then
+    echo "ERR: Could not find project root";
+    echo "ERR:     Looked for project root all the way back to:";
+    echo "ERR:     ${PROJDIR}";
+    echo "ERR:     Could not find package.json";
+    echo;
+    exit 1;
+fi;
 
 # 1. Check if test coverage out of date
 if find ${PROJDIR}/src -newer ${PROJDIR}/test/coverage/text-summary.txt | grep --silent "";
