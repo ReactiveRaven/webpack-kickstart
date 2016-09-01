@@ -6,7 +6,8 @@ module.exports = function (config) {
     coverageReporter: {
       reporters: [
         { type: 'html', subdir: 'html' },
-        { type: 'lcovonly', subdir: '.' }
+        { type: 'lcovonly', subdir: '.' },
+        { type: 'text-summary', subdir: '.', file: 'text-summary.txt' }
       ]
     },
     files: [
@@ -36,7 +37,7 @@ module.exports = function (config) {
           {
             test: /\.js?$/,
             include: /src/,
-            exclude: /(node_modules|bower_components|__tests__)/,
+            exclude: /(node_modules|bower_components|__tests__|-test\.)/,
             loader: 'babel-istanbul-loader',
             query: {
               cacheDirectory: '/tmp'

@@ -21,11 +21,13 @@ So far:
 * [x] Docker Kickstart
 * [x] Travis example integration
 * [x] Greenkeeper for dependency management
+* [x] 100% coverage git hooks
 
 To do:
 * [ ] BDD tests
 * [ ] Automatic documentation generation
-* README info for 
+* [ ] commitizen format git hook
+* README info for
   * [ ] docker
   * [ ] greenkeeper
   * [ ] webpack config
