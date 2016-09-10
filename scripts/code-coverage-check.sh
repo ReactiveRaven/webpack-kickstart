@@ -34,7 +34,7 @@ if [ ${#PROJDIR} -gt 1000 ]; then
 fi;
 
 # 1. Check if test coverage out of date
-if find ${PROJDIR}/src -newer ${PROJDIR}/test/coverage/text-summary.txt | grep --silent "";
+if find ${PROJDIR}/src -newer ${PROJDIR}/test/coverage/text-summary.txt | grep --silent "src";
 then
     echo;
     echo "ERR: Coverage is outdated!";
