@@ -43,7 +43,7 @@
     "karma-phantomjs-launcher": "^1.0.2",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.8.0",
-    "lodash": "^4.15.0",
+    "lodash": "^4.16.5",
     "null-loader": "^0.1.1",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
