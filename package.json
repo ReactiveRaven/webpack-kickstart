@@ -47,7 +47,7 @@
     "null-loader": "^0.1.1",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.15.1"
+    "webpack-dev-server": "^2.4.3"
   },
   "babel": {
     "env": {
