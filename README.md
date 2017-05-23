@@ -1,5 +1,7 @@
 # webpack-kickstart
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ReactiveRaven/webpack-kickstart.svg)](https://greenkeeper.io/)
+
 Kickstart for webpack projects.
 
 [![Stability:Experimental](https://img.shields.io/badge/stability-experimental-orange.svg?style=flat-square&maxAge=2592000)](https://nodejs.org/api/documentation.html#documentation_stability_index)
