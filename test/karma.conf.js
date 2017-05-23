@@ -24,12 +24,13 @@ module.exports = function (config) {
       cache: true,
       devtool: 'inline-source-map',
       module: {
-        preLoaders: [
+        loaders: [
           {
             test: /-test\.js$/,
             include: /src/,
             exclude: /(bower_components|node_modules)/,
-            loader: 'babel',
+            loader: 'babel-loader',
+            enforce: 'pre',
             query: {
               cacheDirectory: '/tmp'
             }
@@ -39,12 +40,11 @@ module.exports = function (config) {
             include: /src/,
             exclude: /(node_modules|bower_components|__tests__|-test\.)/,
             loader: 'babel-istanbul-loader',
+            enforce: 'pre',
             query: {
               cacheDirectory: '/tmp'
             }
-          }
-        ],
-        loaders: [
+          },
           {
             test: /\.(css|less|sass)$/,
             loader: 'null-loader'
@@ -53,7 +53,7 @@ module.exports = function (config) {
             test: /\.js$/,
             include: path.resolve(__dirname, '../src'),
             exclude: /(bower_components|node_modules|__tests__)/,
-            loader: 'babel',
+            loader: 'babel-loader',
             query: {
               cacheDirectory: '/tmp'
             }
